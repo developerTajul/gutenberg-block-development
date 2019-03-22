@@ -1,6 +1,6 @@
 <?php
 /**
-Plugin Name: Gutenberg Block Developer
+Plugin Name: Gutenberg Block Developer with WEB Pack
 Plugin URI: http://facebook.com
 Description: A starter gutenberg block
 Author: Mohammad Tajul Islam
@@ -12,6 +12,7 @@ defined('ABSPATH') || exit();
 
 
 function lwhhgb_register_block_1() {
+	
     wp_register_script(
         'lwhhgb-block-1',
         plugins_url( './src/index.js', __FILE__ ),
@@ -21,6 +22,11 @@ function lwhhgb_register_block_1() {
     register_block_type( 'lwhhgb/hellow-world', array(
         'editor_script' => 'lwhhgb-block-1',
     ) );
+
+    register_block_type( 'lwhhgb/km-testimonial', array(
+        'editor_script' => 'lwhhgb-block-1',
+    ) );
+
 }
 add_action( 'init', 'lwhhgb_register_block_1' );
 
@@ -37,7 +43,7 @@ function lwhhgb_enqueue_block_assets() {
 
 	wp_enqueue_style( 
 		'lwhhgb-block-1', 
-		plugins_url('blocks/block-1/style.css'.__FILE__), 
+		plugins_url('./src/style.css'.__FILE__), 
 		array('wp-blocks')
 	);
 
@@ -47,7 +53,7 @@ function lwhhgb_enqueue_block_assets() {
 
 		wp_enqueue_style( 
 			'lwhhgb-block-1-editor', 
-			plugins_url('blocks/block-1/editor-style.css'.__FILE__), 
+			plugins_url('./src/editor-style.css'.__FILE__), 
 			array('wp-editor-blocks')
 		);
 
@@ -69,7 +75,8 @@ function lwhhgb_add_new_categories($categories){
 
 			array(
 				'title'	=> __('Kormo', ''),
-				'slug'	=> 'kormo'
+				'slug'	=> 'kormo',
+				'icon'	=> 'paperclip'
 			)
 
 	));

@@ -1,0 +1,16 @@
+/*.*
+!.gitignore
+/node_modules
+/wp-admin
+/wp-content/plugins/*
+/wp-content/themes/*
+/wp-content/uploads
+/wp-content/upgrade
+/wp-content/*.*
+!bdevs/
+!bdevs-toolkit/
+!cmb2/
+!js_composer/
+!monster-widget/
+!regenerate-thumbnails/
+!duplicate-page/

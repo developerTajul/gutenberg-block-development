@@ -14,7 +14,7 @@ registerBlockType('lwhhgb/hellow-world', {
 	style 		: [],
 	icon		: {
 		src : 'smiley',
-		background: 'red',
+		background: 'green',
 		foreground: '#fff'
 	},
 	transforms	: {},
@@ -30,3 +30,37 @@ registerBlockType('lwhhgb/hellow-world', {
 		return createElement('p', {}, 'Hellow Samsu');
 	}
 });
+
+
+
+
+
+registerBlockType('lwhhgb/km-testimonial', {
+	title 		: __('Testimonial', 'samsu'),
+	description : __('Testimonial Section', 'samsu'),
+	category	: 'kormo',
+	keywords	: [
+		__('testimonial', 'samsu'),
+		__('shak', 'samsu')
+	],
+	attributes  : {},
+	style 		: [],
+	icon		: {
+		src : 'smiley',
+		background: 'blue',
+		foreground: '#fff'
+	},
+	transforms	: {},
+	// parent		: [],
+	supports	: {
+		align: true,
+		alignWide: true,
+	},
+	edit(){
+		return createElement('p', {}, 'Hellow Samsu');
+	},
+	save(){
+		return createElement('p', {}, 'Hellow Samsu');
+	}
+});
+
