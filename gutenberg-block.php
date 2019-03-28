@@ -19,6 +19,8 @@ function lwhhgb_register_block_1() {
         array( 'wp-blocks', 'wp-element', 'wp-i18n' )
     );
 
+
+
     register_block_type( 'lwhhgb/hellow-world', array(
         'editor_script' => 'lwhhgb-block-1',
     ) );

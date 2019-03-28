@@ -11,7 +11,21 @@ registerBlockType('lwhhgb/hellow-world', {
 		__('Dummy Word', 'samsu')
 	],
 	attributes  : {},
-	style 		: [],
+	style 		: [
+		{
+	        name: 'default',
+	        label: __( 'Rounded' ),
+	        isDefault: true
+	    },
+	    {
+	        name: 'outline',
+	        label: __( 'Outline' )
+	    },
+	    {
+	        name: 'squared',
+	        label: __( 'Squared' )
+	    },
+	],
 	icon		: {
 		src : 'smiley',
 		background: 'green',
@@ -22,9 +36,10 @@ registerBlockType('lwhhgb/hellow-world', {
 	supports	: {
 		align: true,
 		alignWide: true,
+		anchor: true,
 	},
 	edit(){
-		return createElement('p', {}, 'Hellow Samsu');
+		return createElement('p', {}, 'This is Tajul Via, speaking');
 	},
 	save(){
 		return createElement('p', {}, 'Hellow Samsu');
